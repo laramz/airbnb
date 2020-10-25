@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Exploratory Data Analysis | Data Science Project Guide: Airbnb</title>
+  <meta name="description" content="Everything you need to know for your successful TechAcademy Data Science Project" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Exploratory Data Analysis | Data Science Project Guide: Airbnb" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Everything you need to know for your successful TechAcademy Data Science Project" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Exploratory Data Analysis | Data Science Project Guide: Airbnb" />
+  
+  <meta name="twitter:description" content="Everything you need to know for your successful TechAcademy Data Science Project" />
+  
+
+<meta name="author" content="TechAcademy e.V." />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction-to-your-project.html"/>
+<link rel="next" href="price-prediction-application-of-statistical-methods.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Airbnb Data Science Project</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome!</a></li>
+<li class="chapter" data-level="2" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html"><i class="fa fa-check"></i><b>2</b> What’s Data Science and How Do I Do It?</a><ul>
+<li class="chapter" data-level="2.1" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#whats-r"><i class="fa fa-check"></i><b>2.1</b> What’s R?</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#rstudio-cloud"><i class="fa fa-check"></i><b>2.1.1</b> RStudio Cloud</a></li>
+<li class="chapter" data-level="2.1.2" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#curriculum"><i class="fa fa-check"></i><b>2.1.2</b> Curriculum</a></li>
+<li class="chapter" data-level="2.1.3" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#links"><i class="fa fa-check"></i><b>2.1.3</b> Links</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#whats-python"><i class="fa fa-check"></i><b>2.2</b> What’s Python?</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#anaconda-and-jupyter"><i class="fa fa-check"></i><b>2.2.1</b> Anaconda and Jupyter</a></li>
+<li class="chapter" data-level="2.2.2" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#curriculum-1"><i class="fa fa-check"></i><b>2.2.2</b> Curriculum</a></li>
+<li class="chapter" data-level="2.2.3" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#links-1"><i class="fa fa-check"></i><b>2.2.3</b> Links</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#your-data-science-project"><i class="fa fa-check"></i><b>2.3</b> Your Data Science Project</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#coding-meetups-and-requirements"><i class="fa fa-check"></i><b>2.3.1</b> Coding Meetups and Requirements</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="introduction-to-your-project.html"><a href="introduction-to-your-project.html"><i class="fa fa-check"></i><b>3</b> Introduction to Your Project</a><ul>
+<li class="chapter" data-level="3.1" data-path="introduction-to-your-project.html"><a href="introduction-to-your-project.html#purpose-of-the-project-guide"><i class="fa fa-check"></i><b>3.1</b> Purpose of the Project Guide</a></li>
+<li class="chapter" data-level="3.2" data-path="introduction-to-your-project.html"><a href="introduction-to-your-project.html#what-is-this-project-about"><i class="fa fa-check"></i><b>3.2</b> What is this Project About?</a></li>
+<li class="chapter" data-level="3.3" data-path="introduction-to-your-project.html"><a href="introduction-to-your-project.html#exploratory-data-analysis-getting-to-know-the-data-set"><i class="fa fa-check"></i><b>3.3</b> Exploratory Data Analysis – getting to know the data set</a></li>
+<li class="chapter" data-level="3.4" data-path="introduction-to-your-project.html"><a href="introduction-to-your-project.html#prediction-apply-statistical-methods"><i class="fa fa-check"></i><b>3.4</b> Prediction – Apply Statistical Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>4</b> Exploratory Data Analysis</a><ul>
+<li class="chapter" data-level="4.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualizing-apartment-availability"><i class="fa fa-check"></i><b>4.1</b> Visualizing Apartment Availability</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#import-clean-and-transform-the-data"><i class="fa fa-check"></i><b>4.1.1</b> Import, Clean and Transform the Data</a></li>
+<li class="chapter" data-level="4.1.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#days-lineplot"><i class="fa fa-check"></i><b>4.1.2</b> 365 Days Lineplot</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualize-individual-airbnb-offers-with-the-listings-dataset"><i class="fa fa-check"></i><b>4.2</b> Visualize individual Airbnb offers with the listings dataset</a></li>
+<li class="chapter" data-level="4.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#merging-of-listings-and-reviewing-the-data-set"><i class="fa fa-check"></i><b>4.3</b> Merging of Listings and Reviewing the Data Set</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#your-first-barplot"><i class="fa fa-check"></i><b>4.3.1</b> Your First Barplot</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualization-with-maps"><i class="fa fa-check"></i><b>4.4</b> Visualization with Maps</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="price-prediction-application-of-statistical-methods.html"><a href="price-prediction-application-of-statistical-methods.html"><i class="fa fa-check"></i><b>5</b> Price Prediction – Application of Statistical Methods</a><ul>
+<li class="chapter" data-level="5.1" data-path="price-prediction-application-of-statistical-methods.html"><a href="price-prediction-application-of-statistical-methods.html#examine-the-correlation-between-the-variables-train"><i class="fa fa-check"></i><b>5.1</b> Examine the Correlation Between the Variables (train)</a></li>
+<li class="chapter" data-level="5.2" data-path="price-prediction-application-of-statistical-methods.html"><a href="price-prediction-application-of-statistical-methods.html#first-predictions-with-simple-regression-models-train"><i class="fa fa-check"></i><b>5.2</b> First Predictions with Simple Regression Models (train)</a></li>
+<li class="chapter" data-level="5.3" data-path="price-prediction-application-of-statistical-methods.html"><a href="price-prediction-application-of-statistical-methods.html#from-training-to-testing-making-predictions"><i class="fa fa-check"></i><b>5.3</b> From Training to Testing – Making Predictions</a></li>
+<li class="chapter" data-level="5.4" data-path="price-prediction-application-of-statistical-methods.html"><a href="price-prediction-application-of-statistical-methods.html#apply-advanced-machine-learning-algorithms"><i class="fa fa-check"></i><b>5.4</b> Apply Advanced Machine Learning Algorithms</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="excercise-checklist.html"><a href="excercise-checklist.html"><i class="fa fa-check"></i><b>6</b> Excercise Checklist</a></li>
+<li class="chapter" data-level="7" data-path="whats-next-in-your-data-science-career.html"><a href="whats-next-in-your-data-science-career.html"><i class="fa fa-check"></i><b>7</b> What’s Next in Your Data Science Career?</a><ul>
+<li class="chapter" data-level="7.1" data-path="whats-next-in-your-data-science-career.html"><a href="whats-next-in-your-data-science-career.html#data-science-in-general"><i class="fa fa-check"></i><b>7.1</b> Data Science in General</a></li>
+<li class="chapter" data-level="7.2" data-path="whats-next-in-your-data-science-career.html"><a href="whats-next-in-your-data-science-career.html#r"><i class="fa fa-check"></i><b>7.2</b> R</a></li>
+<li class="chapter" data-level="7.3" data-path="whats-next-in-your-data-science-career.html"><a href="whats-next-in-your-data-science-career.html#python"><i class="fa fa-check"></i><b>7.3</b> Python</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://tech-academy.io/" target="blank">&copy 2020 TechAcademy e.V.</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science Project Guide: Airbnb</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="exploratory-data-analysis" class="section level1">
+<h1><span class="header-section-number">4</span> Exploratory Data Analysis</h1>
+<p>Before you can dive into the data, set up your programming environment. This will be the place where the magic happens – all your coding will take place there.</p>
+<div class="tips r">
+<p>In your workspace on <a href="https://rstudio.cloud/projects">rstudio.cloud</a> we have already uploaded an “assignment” for you (Template Airbnb). When you create a new project within the workspace <em>Class of ’20/21 | TechAcademy | Data Science with R</em>, your own workspace will open up. We’ve already made some arrangements for you: The data sets that you will be working with throughout the project are already available in your working directory. We also created an ‘RMarkdown’ file, with which you will be able to create a detailed report of your project. You can convert this file into a PDF document when you have completed the documentation. Open the file “Markdown_Airbnb.Rmd” and see for yourself!</p>
+</div>
+<div class="tipsp python">
+<p>In the <a href="https://colab.research.google.com">Google Colab</a> workspace you will find the option to connect your Google account to your notebook: On the left pane click on “Files” (= the folder icon), then click on “Mount Drive” (= folder icon with drive logo), and then follow the instructions.
+Now you have access to the TechAcademy drive. There, you can navigate to the “data” folder with all the data sets you need for this project.
+Alternatively, you can download the data folder from the TechAcademy drive and upload it to Google colab.</p>
+</div>
+<div id="visualizing-apartment-availability" class="section level2">
+<h2><span class="header-section-number">4.1</span> Visualizing Apartment Availability</h2>
+<div id="import-clean-and-transform-the-data" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Import, Clean and Transform the Data</h3>
+<p>In this section you will get to apply the basics of working with data: You will import, clean and transform the data so that you will then be able to visualize it in the next step.</p>
+<div class="tips r">
+<p>First the data set has to be loaded from your folder structure into the workspace. Import the calendar data set into your workspace and name the object accordingly.</p>
+<p><code>calendar &lt;- read.csv("calendar.csv")</code></p>
+<p>Now get an overview of the data set. How is it structured and which variables does it contain? You can use the following functions, for example:</p>
+<p><code>head(calendar)</code><br />
+<code>str(calendar)</code><br />
+<code>summary(calendar)</code></p>
+</div>
+<div class="tipsp python">
+<p>Import the pandas library to your notebook with <code>import pandas as pd</code>. Load the data from your csv-file into a data frame with pandas’ <code>read_csv</code> function.</p>
+<p>Have a look at the first rows of your dataframe, print some descriptive statistics and get a brief summary of the data with the pandas methods <code>.head()</code>, <code>.describe()</code> and <code>.info()</code>.
+Take note of the data format of the “price” column – you’ll make use of that information in the next step.</p>
+</div>
+<p>Visualization is one of the most helpful methods to get a feeling for the relation of the various variables of the data set. As already mentioned, this process is called <em>Exploratory Data Analysis</em> (EDA).</p>
+<p>Before we can start with that, we first have to clean the data such that the functions can process the data set properly. You will have to do that quite often in the field of Data Science, since the data very often comes in an unusable format. In our case, for example, the values in the price column are stored as type <code>string</code> – this becomes an issue when performing math operations.</p>
+<div class="tips r">
+<p>In order for <code>R</code> to process this, we need to remove a character from the observations and convert the variable into a numeric format. You can use the functions <code>str_remove_all()</code> or <code>gsub()</code> together with <code>as.numeric()</code> for this.</p>
+<p>To make the next step easier, we still have to convert the logical variable <code>available</code> from a <code>character</code> to a <code>boolean</code> data type. Use the <code>ifelse()</code> function for this
+and replace “f” and “t” with the associated logical values <code>FALSE</code> and <code>TRUE</code>.</p>
+<p>As a last step, transform the date variable into the <code>R</code> format <code>date</code>. Remember the <code>as.numeric()</code> function? <code>R</code> has a similar function to convert variables to a date format.</p>
+</div>
+<div class="tipsp python">
+<p>To remove a character in a column’s cells use pandas’ <code>.replace()</code> method. Similarly, convert the data to a different type with <code>.astype()</code> (Hint: You will need to apply the replace method twice on the price column before converting).</p>
+<p>The column indicating if an apartment is available or not contains two types of values - “t” and “f” - which obviously stand for the boolean values True and False. To save you some headaches in the next task convert both values to be of type boolean.</p>
+</div>
+<p>Our goal now is to show the number of Airbnb apartments that are available over the next year in a simple line plot. This is still not possible, however, since there currently is an entry for each apartment for each of the upcoming 365 days and another related variable that shows us whether the apartment is available or not on each of those days. The transformed data set should summarize this information and should only have one entry for each day that tells us the aggregated number of available Airbnbs in Berlin.</p>
+<div class="tips r">
+<p>The <code>R</code> package <code>dplyr</code> is the first choice for this type of transformation task. If you haven’t heard of it yet, take the respective DataCamp course and/or the DataCamp course about Exploratory Data Analysis. Use the <code>dplyr</code> functions <code>group_by()</code> and <code>summarize()</code> for this and save the resulting data set in a new data frame, which you can call “avail_by_date”. You can of course name the data frame however you wish.</p>
+<p>If you need further help, you can also use the <code>dplyr</code> Cheat Sheet for this task, on which the transformations are visually displayed.</p>
+</div>
+<div class="tipsp python">
+<p>To sum the numbers of available apartments for each day you first need to filter the data frame by all available apartments.</p>
+<p>Now, understand the next step, remember that you converted the values in the “available” column to be of type <code>bool</code> before. In Python, the boolean value True is equal to 1, while False is equal to 0. Thus, (True + True + False) is equal to 2 (try it out: <code>print(True + True + False)</code>), and thus, you could now sum the entries in the available column to get the number of available apartments.</p>
+<p>So, first group the data frame by date with the <code>.groupby()</code>method and use <code>.sum()</code> to get the number of available apartments for each date.</p>
+<p>The pandas cheat sheet might be of help here - feel free to make use of it.</p>
+</div>
+</div>
+<div id="days-lineplot" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> 365 Days Lineplot</h3>
+<p>We have finally transformed the data set into a useful format, so now it is time to actually visualize it. We are going to get started with a simple line plot that shows the number of available apartments over the next 365 days. This is what your result could look like:</p>
+<p><img src="plot/1_3_AvailabilityOutlook.png" width="100%" style="display: block; margin: auto;" />
+The following is a more refined example to show you how you can improve a simple line plot to a more complex and informative plot. The attention of the viewer can be brought to certain patterns this way. But don’t get caught up in all the little details, refine your plot to your liking and then move on to the next task. You can always come back to this and play around with the different refinement options.</p>
+<p><img src="plot/1_3_AvailabilityOutlook_advanced.png" width="100%" /></p>
+<div class="tips r">
+<p>You can use the base package that includes the function <code>plot()</code> or you could use the more extensive and very flexible graphics package <code>ggplot2</code>.</p>
+</div>
+<div class="tipsp python">
+<p>Having the data in the right format we can now start plotting a simple line graph. For this you can use matplotlib’s <code>plt.plot()</code>.</p>
+</div>
+<p>Looking at the line plot, you can see a clear pattern with respect to different dates. There are distinct drops in the availability of the Airbnb apartments. <strong>One task for your project is to explain the cause behind this pattern.</strong></p>
+</div>
+</div>
+<div id="visualize-individual-airbnb-offers-with-the-listings-dataset" class="section level2">
+<h2><span class="header-section-number">4.2</span> Visualize individual Airbnb offers with the listings dataset</h2>
+<p>After looking at the availability over time using the <code>calendar</code> data set in the first step, we would now like to find out a little more about the price structure of the available apartments. For this we need the <code>listings</code> data set that we can load into the workspace as usual. A closer look reveals that the <code>price</code> and <code>cleaning_fee</code> columns contain characters and once again need to be cleaned.</p>
+<p>Therefore, as in the first task, the dollar sign as well as the comma must be deleted from these columns. Since you use the same procedure for the <code>price</code> and <code>cleaning_fee</code> columns, a <code>for</code>-loop is recommended here. Implement this loop in a self-written function <code>clean_price()</code>, so that you save a lot of lines of code, especially in the prediction part.</p>
+<div class="tips r">
+<p>There are different ways to create this for-loop, so just experiment with what makes most sense to you.</p>
+<p>But you definitely want to iterate over all values within one column, so your for-loop function should contain</p>
+<p><code>for (i in 1:length(column_name))</code></p>
+<p>where “column_name” only acts as a place holder for the variable you want to work on.</p>
+</div>
+<div class="tipsp python">
+<p>Create a list containing the column names of both columns you want to iterate over.
+The for-loop body doesn’t necessarily need more than one line and might start like this:</p>
+<pre><code>for column_name in column_names_list:
+    df[column_name] = train[column_name].str.replace(....</code></pre>
+</div>
+<p>Now that we have cleaned up the data set, we can take a closer look at the price structure of the various neighborhoods. First of all, we would like to know what the average price and the corresponding standard deviation is for each neighborhood. Make a list with the names of the different parts of the city as well as the <code>mean</code> and the <code>sd</code>.</p>
+<div class="tips r">
+<p>For this, you can again use <code>dplyr</code>-functions like <code>group_by()</code> or <code>summarize()</code>.</p>
+</div>
+<div class="tipsp python">
+<p>Once again you can use the groupby method to group by neighborhood and apply the aggregation function <code>.std()</code> to get the standard deviations. Similarly, you can use <code>.mean()</code> to get the mean values. Filter both data frames by the price column.</p>
+</div>
+<p>We now want to compare the price distribution for the on average most expensive district with the on average least expensive district. For this, you have to think about the different types of plots that you have gotten to know in your courses and have to find the plot type that is most suited for this type of visualization. Once you have created the diagram, you will probably have to filter out some of the outliers with extremely high prices in order to get a meaningful plot.</p>
+<div class="tips r">
+<p>In <code>ggplot2</code> graphics, you can easily filter in the plot specifications with <code>xlim</code> or <code>ylim</code>.</p>
+</div>
+<div class="tipsp python">
+<p>One way to find the on average most expensive neighborhood is to simply sort the mean price column in descending order.</p>
+<p>For plotting: The Matplotlib documentation is a great source of inspiration with many examples including code that generated them.</p>
+</div>
+<p>On the Airbnb website, the available apartments can be sorted by price and are shown to the customer in the appropriate order. One method to end up higher in this ranking is to quote a low price and a higher cleaning fee. Can we see this behavior in our data set? To figure this out, create an additional column in your data frame with the name <code>price_and_clean</code>, in which you add both individual prices. Now examine how the price distribution changes in the two previously examined parts of the city. Compare the price and price + cleaning fee of a district in a diagram. What do you observe?</p>
+</div>
+<div id="merging-of-listings-and-reviewing-the-data-set" class="section level2">
+<h2><span class="header-section-number">4.3</span> Merging of Listings and Reviewing the Data Set</h2>
+<p>In the previous part you got to know and visualized the listings data set. However, one important piece of information is not included in this data set: How popular are the individual apartments? We use the number of reviews on Airbnb as a measure of this. This variable could later become very important for price prediction. Fortunately, we have another data set, <code>reviews</code>, in which the apartment ID and the date are saved for each individual review. Our goal now is to count the number of reviews for each individual apartment and to save them. Since we can also find the ID in the listings data set, we can use this variable to merge the two data sets.</p>
+<p>First load the new <code>reviews</code> data set into your workspace and take a closer look at it with the familiar functions. Now count the number of reviews per apartment.</p>
+<div class="tips r">
+<p>This works with the <code>table()</code> function or with <code>group_by()</code> and <code>summarize()</code>. Note, however, that you still have to convert the result of the <code>table()</code> function into a <code>data.frame</code> format for further processing.</p>
+</div>
+<div class="tipsp python">
+<p>Count the number of reviews per apartament (i.e. per “listing_id”) with the functions you’re already familiar with at this point. You can use the groupby argument <code>as_index=False</code> to avoid setting the column id as index.</p>
+</div>
+<p>Now look at the new data set. Does each ID have exactly one entry with the number of ratings?</p>
+<p>To be able to merge the data sets, you have to rename the newly generated variables in the new data set. Name the apartment ID analogous to the <code>listings</code> data set <code>id</code>, as well as the number of reviews <code>n_reviews</code>.</p>
+<div class="tips r">
+<p>This can be done with the function <code>rename()</code> from the <code>dplyr</code> package.</p>
+</div>
+<div class="tipsp python">
+<p>Assign the new column names as a list to the <code>.column</code> attribute.</p>
+</div>
+<p>If your data set looks like this, you can merge it with listings:</p>
+<p><img src="plot/2_merging_table.png" width="40%" style="display: block; margin: auto;" /></p>
+<div class="tips r">
+<p>You can use the following structure for merging:</p>
+<p><code>listings_reviews &lt;- merge(dataset1, dataset2, by = ...)</code></p>
+</div>
+<div class="tipsp python">
+<p>Merge with <code>listings_reviews=pd.merge(dataframe1,dataframe2,left_on=...</code>.</p>
+</div>
+<p>Take a look at the new data set. Is the new variable <code>n_reviews</code> in the correct data format?</p>
+<div id="your-first-barplot" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> Your First Barplot</h3>
+<p>We now want to take a closer look at a smaller part of the data set: What do the most popular apartments have in common? As an indicator of the popularity of an offer we use the previously generated number of reviews <code>n_reviews</code>.</p>
+<p>Extract the 200 most reviewed apartments. One approach for this is to first sort the data set in descending order according to <code>n_reviews</code> and then to extract the first 200 entries into a new data set.</p>
+<p>Now you can easily visualize the districts in which the 200 most frequently reviewed apartments are located. A bar plot is ideal for this. Feel free to try other types of plots that can be used to best answer this question.</p>
+<p>This is what it could look like:</p>
+<p><img src="plot/3_3_Barplot_MostReviewed.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="tips r">
+<p>The key commands that you can use for this within <code>ggplot()</code> are <code>geom_bar()</code> and <code>coord_flip()</code>.</p>
+</div>
+<div class="tipsp python">
+<p>You can plot bar plots with both pandas and matplotlib.
+If you chose to plot with matplotlib, you could use the <code>plt.barh()</code> method. Additionally you might want to use methods like <code>.set_yticks()</code>, <code>.set_yticklabels()</code> and <code>.invert_yaxis()</code>.</p>
+<p>If Python throws you an <code>AttributeError</code>, then try using the <code>plt.gca()</code> method.</p>
+</div>
+</div>
+</div>
+<div id="visualization-with-maps" class="section level2">
+<h2><span class="header-section-number">4.4</span> Visualization with Maps</h2>
+<p>This part will be the final and most advanced part of the EDA – but also the most rewarding. Anyone who knows the Airbnb website has probably also seen their map showing the locations of all apartments. We can do the same! The only difference is that our data gives us even more options to show what really interests us!</p>
+<p>To reduce complexity, use the smaller data set filtered in the third task with the 200 most frequently reviewed apartments for this task.</p>
+<p>We can then place actual objects on the map. Plot the 200 top rated listings on the map. If you have not solved task 3 yet, simply select 200 listings according to other criteria or at random to solve the task. It could look like this:</p>
+<p><img src="plot/4_1_map_top200_simple.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="tips r">
+<p>There are different ways of creating a map with <code>R</code>, but the following tips will be about the <code>ggmap</code> package.</p>
+<p>Before you can download map material via an API interface, you have to define the corners of the map as coordinates.</p>
+<p>First define the height and width of the included coordinates. In the next step you can use this to define the exact corners relative to the coordinates in the data set.</p>
+<pre><code>height &lt;- max(...) - min(...)
+width &lt;- max(...) - min(...)</code></pre>
+<p>You can then define a vector, which you can call <code>berlin_borders</code>, for example. It is used to define the values for the edges of the map. You can add a small safety margin to the respective minima or maxima of the coordinates. Play around with the factors later to find a good section of the map.</p>
+<pre><code>berlin_borders &lt;- c(bottom = min(listing_top200$latitude) - 0.1 * height,
+top = max(listing_top200$latitude) + 0.1 * height,
+left = min(listing_top200$longitude) - 0.1 * width,
+right = max(listing_top200$longitude) + 0.1 * width)</code></pre>
+<p>Then we download the defined map section from the service provider Stamen Maps with the <code>get_stamenmap()</code> function and save it in an object.</p>
+</div>
+<div class="tipsp python">
+<p>We are going to use yet another library, this one is called <code>ipyleaflet</code>. For this task you will have to work with the documentation for this library.</p>
+<p>Start with creating a map using the Circle Marker layer and draw a circle for each apartment. Note how in the documentation only one circle is being drawn. But this is no problem – just create a for-loop and draw a new circle in each iteration!</p>
+<p>First, you’ll need an iterable to iterate over: Create a list with sub-lists containing longitude and latitude data for each apartment and call this list something like “positions”.</p>
+<p>Done that, you can copy the appropriate lines of the example from the documentation and paste them into your for loop:</p>
+<pre><code>center = [52.5, 13.4]
+m = Map(center=center, zoom=11)
+ 
+for pos in positions:
+    # your code here
+
+m</code></pre>
+<p>You may want to limit the amount of dots plotted to 1000.</p>
+</div>
+<p>In addition to the coordinates, there is a lot of information about each listing in our data. This time plot the apartments in different colors.</p>
+<p>Use the city districts as a distinguishing feature (also to easily see whether the district assignment actually works). It is sufficient if you implement the same plot as before, only with different colors. However, this is an example of how a more advanced plot can look like:</p>
+<p><img src="plot/4_2_map_top200_by_neighbourhood.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="tips r">
+<p>This plot was created with <code>ggmaps</code> and the additional package <code>concaveman</code> and its function <code>geom_mark_hull()</code>, which draws polygons around a cluster of coordinates.</p>
+</div>
+<div class="tipsp python">
+<p>The plot shown has been created with <code>R</code>. In <code>Python</code> you’ll simply color the dots according to the neighborhood.</p>
+<p>To do so you can recycle some parts of the code from before, but this time you work with a nested <code>for</code>-loop (loop inside of a loop).
+You’re also going to need a new list, with sublists grouped by neighborhood, which may look like this:
+positions = [[[52.001, 52, 123],[52.111, 52.321]], [[52.999, 52, 888],…], …]</p>
+<p>Further, you need a list of color names:
+<code>colors = ['red','blue',...]  # Use “normal” colors, the library might not recognize more fancy ones</code></p>
+<p>Your for-loop could look like this:</p>
+<pre><code>counter = 0
+ 
+for positions in grouped_positions:
+    for pos in positions:
+        # …
+        circle_marker.location = pos
+        circle_marker.color = colors[counter]
+        # …
+    counter += 1</code></pre>
+</div>
+<p>For some analyzes it is easier if you don’t just see points, but their distributions on a map. For example, to see where there are many apartments in a small space, you can display the apartment density. It could look like this:</p>
+<p><img src="plot/4_3_map_top200_density.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="tips r">
+<p>To create such a two-dimensional density plot you can use the <code>geom_density2d()</code> and <code>stat_density2d()</code> packages on the map. If you don’t know exactly how the individual arguments should be filled, you can always google for more help.</p>
+</div>
+<div class="tipsp python">
+<p>No hints or tips here - it’s up to you to study the documentation for the Heatmap layer and to come up with a (nice) map ;)</p>
+</div>
+<p>Congratulations – based on your work with basic data transformations and many visualizations, you now have a solid understanding of the Airbnb offers in Berlin. With this, you have now successfully completed the first part of the project! If you are in the beginner group, your minimum requirements are hereby met. Nevertheless, we strongly recommend that you also have a look at the following part. There you’ll be developing methods to predict the price of an apartment! Sounds exciting, doesn’t it?</p>
+
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction-to-your-project.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="price-prediction-application-of-statistical-methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
