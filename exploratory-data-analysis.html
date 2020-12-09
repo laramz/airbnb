@@ -229,7 +229,7 @@ The following is a more refined example to show you how you can improve a simple
 <p>Create a list containing the column names of both columns you want to iterate over.</p>
 <p>The for-loop body doesn’t necessarily need more than one line and might start like this:</p>
 <pre><code>for column_name in column_names_list:
-    df[column_name] = train[column_name].str.replace(....</code></pre>
+    df[column_name] = df[column_name].str.replace(....</code></pre>
 </div>
 <p>Now that we have cleaned up the data set, we can take a closer look at the price structure of the various neighborhoods. First of all, we would like to know what the average price and the corresponding standard deviation is for each neighborhood. Make a list with the names of the different parts of the city as well as the <code>mean</code> and the <code>sd</code>.</p>
 <div class="tips r">
